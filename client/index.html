@@ -36,7 +36,7 @@
                   position: new google.maps.LatLng(station.latitude, station.longitude),
                   map: map,
                   title: station.name,
-                  icon: 'img/flags/' + (station.country != null ? station.country.toLowerCase() : 'unknown') + '.gif',
+                  icon: (station.country == null || station.country.indexOf('ERR:') != -1 ? 'http://maps.google.com/mapfiles/marker.png' : 'img/flags/' + station.country.toLowerCase() + '.gif'),
                 });
             });
           });
