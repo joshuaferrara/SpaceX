@@ -8,6 +8,15 @@ I was bored one day and decided to see if I could find anything relating to the 
 
 ---
 
+###Instructions
+1. `git clone https://github.com/joshuaferrara/SpaceX.git`
+2. `cd` into the `spacex` directory
+3. `npm install`
+4. `node server`
+5. The server should now be running locally on port 3000. Give it a few seconds to download and parse the data then navigate to [http://localhost:3000/](http://localhost:3000/)
+
+---
+
 ###Libraries used:
 * [Express](https://www.npmjs.com/package/express) - NodeJS Web Server.
 * [Request](https://www.npmjs.com/package/request) - Allows for easier HTTP requests.
