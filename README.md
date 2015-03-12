@@ -4,7 +4,7 @@ I was bored one day and decided to see if I could find anything relating to the 
 ---
 
 ###Screenshot
-![Screenshot](https://cdn.rawgit.com/joshuaferrara/SpaceX/master/screenshot.png)
+![Screenshot](https://rawgit.com/joshuaferrara/SpaceX/master/screenshot.png)
 
 ---
 
