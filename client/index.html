@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en" ng-app>
+  <head>
+    <title>Ground Stations</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAp1lOzqoMvcNBWjsMNM-PgBBgVaFcdufg"></script>
+    <style type="text/css">
+      html { height: 100% }
+      body { height: 100%; margin: 0; padding: 0 }
+      #map-canvas { height: 100% }
+    </style>
+  </head>
+  <body>
+    <div id="map-canvas"></div>
+    
+    <script type="text/javascript">
+        var socket = io.connect();
+        var SSC = {
+          
+        }
+        
+        socket.on('connect', function() {
+          socket.on('groundStations', function(groundStations) {
+            SSC.groundStations = groundStations;
+            
+            var mapOptions = {
+              center: { lat: 0, lng: 0},
+              zoom: 2
+            };
+            var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+            
+            Object.keys(SSC.groundStations).forEach(function(key) {
+                var station = SSC.groundStations[key];
+                new google.maps.Marker({
+                  position: new google.maps.LatLng(station.latitude, station.longitude),
+                  map: map,
+                  title: station.name,
+                  icon: 'img/flags/' + (station.country != null ? station.country.toLowerCase() : 'unknown') + '.gif',
+                });
+            });
+          });
+        });
+    </script>
+  </body>
+</html>
