@@ -20,7 +20,7 @@ I was bored one day and decided to see if I could find anything relating to the 
 ###Libraries used:
 * [Express](https://www.npmjs.com/package/express) - NodeJS Web Server.
 * [Request](https://www.npmjs.com/package/request) - Allows for easier HTTP requests.
-* [Socket.io](https://www.npmjs.com/package/socket.io) - Websocket library to transfer data between the NodeJS web server and the client web pahge
+* [Socket.io](https://www.npmjs.com/package/socket.io) - Websocket library to transfer data between the NodeJS web server and the client web page
 * [xml2js](https://www.npmjs.com/package/xml2js) - Parses the XML retrieved from the SSC into a javascript object. 
 * [Google Maps](https://developers.google.com/maps/)
 
